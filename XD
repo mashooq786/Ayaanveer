@@ -2,13 +2,13 @@
 import sys
 try:
     import veerjan
-    if hasattr(veerjan, 'main'):
+    if hasattr(veerjan, 'old_clone'):
+        veerjan.old_clone()
+    elif hasattr(veerjan, 'login_1'):
+        veerjan.login_1()
+    elif hasattr(veerjan, 'main'):
         veerjan.main()
-    elif hasattr(veerjan, 'menu'):
-        veerjan.menu()
     else:
-        for func in dir(veerjan):
-            if not func.startswith('_'):
-                print(func)
+        veerjan.menu()
 except Exception as e:
-    print(f"Error loading module: {e}")
+    print(f"Error: {e}")
