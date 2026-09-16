@@ -1,0 +1,6 @@
+import sys
+try:
+    import veerjan
+except Exception as e:
+    print(f"Error loading module: {e}")
+
